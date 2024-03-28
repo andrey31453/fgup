@@ -1,0 +1,26 @@
+{
+  "compilerOptions": {
+    "target": "es5",
+    "module": "es6",
+    "moduleResolution": "node",
+    "allowSyntheticDefaultImports": true,
+    "esModuleInterop": true,
+    "sourceMap": true,
+    "forceConsistentCasingInFileNames": true,
+    "paths": {
+      "@api": ["./src/entities/api"],
+      "@consts": ["./src/entities/consts"],
+      "@entities": ["./src/entities"],
+      "@features": ["./src/features"],
+      "@libs": ["./src/shared/libs"],
+      "@store": ["./src/processes/store"],
+      "@styles": ["./src/shared/styles"],
+      "@types": ["./src/entities/types"],
+      "@ui": ["./src/shared/ui"],
+      "@widgets": ["./src/widgets"],
+      "@widgets": ["./src/widgets/index.ts"]
+    }
+  },
+
+  "includes": ["./src/app/*.d.ts"]
+}
