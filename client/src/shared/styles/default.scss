@@ -1,6 +1,0 @@
-@use '@styles/utils';
-
-html {
-  overflow-y: auto !important;
-  @include utils.scroll_style();
-}

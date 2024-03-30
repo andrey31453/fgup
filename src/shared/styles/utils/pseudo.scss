@@ -1,0 +1,11 @@
+~widgetsuse '~styles/utils/position';
+~widgetsuse 'sass:map';
+
+~widgetsmixin before($offset: 0) {
+	position: relative;
+
+	&::before {
+		~widgetsinclude position.absolute(0, $offset);
+		content: '';
+	}
+}

@@ -1,0 +1,13 @@
+~widgetsuse 'sass:string';
+~widgetsuse 'sass:map';
+
+~widgetsmixin rule_list($rule_list, $options_input: 'true') {
+  $options: string.split($options_input, ',');
+
+  ~widgetseach $option in $options {
+    $modifiers: map.get($rule_list, $option);
+    ~widgetseach $rule, $value in $modifiers {
+      #{$rule}: $value;
+    }
+  }
+}
