@@ -11,11 +11,13 @@
 		"baseUrl": ".",
 		"paths": {
 			"~db": ["./src/.db"],
+			"~pages": ["./src/pages"],
 			"~config": ["./src/entities/config"],
 			"~api": ["./src/entities/api"],
 			"~entities": ["./src/entities"],
 			"~features": ["./src/features"],
 			"~libs": ["./src/shared/libs"],
+			"~processes": ["./src/processes"],
 			"~store": ["./src/processes/store"],
 			"~types": ["./src/entities/types"],
 			"~ui": ["./src/shared/ui"],

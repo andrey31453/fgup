@@ -1,10 +1,9 @@
-// imports
-import { createApp } from 'vue'
-import { createPinia } from 'pinia'
+// create_app
 
+import { createApp as create_app } from 'vue'
 import app from './app.vue'
 
-const vue_app = createApp(app)
+const vue_app = create_app(app)
 
 // styles
 
@@ -22,8 +21,13 @@ vue_app.use(vuetify)
 
 // pinia
 
-const pinia = createPinia()
-vue_app.use(pinia)
+import { createPinia as create_pinia } from 'pinia'
+vue_app.use(create_pinia())
+
+// router
+
+import { router } from '~processes'
+vue_app.use(router)
 
 // mount
 
