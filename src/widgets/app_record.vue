@@ -1,11 +1,13 @@
 <template>
-	<div class="app_record">Страх убивает разум. ~widgetscovid-19</div>
+	<div class="app_record">
+		И так сойдет — враг человечества. @Кто убил BlackBerry
+	</div>
 </template>
 
 <style lang="scss">
-~widgetsuse '~styles/utils';
+@use '~styles/utils';
 
 .app_record {
-	~widgetsinclude utils.font('mark');
+	@include utils.font('mark');
 }
 </style>

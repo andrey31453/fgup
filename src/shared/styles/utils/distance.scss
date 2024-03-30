@@ -1,18 +1,18 @@
-~widgetsuse '~styles/vars';
-~widgetsuse 'sass:string';
+@use '~styles/vars';
+@use 'sass:string';
 
-~widgetsfunction get_padding($padding) {
-	~widgetsreturn calc(#{$padding} * #{vars.$d});
+@function get_padding($padding) {
+	@return calc(#{$padding} * #{vars.$d});
 }
 
-~widgetsmixin padding($padding) {
+@mixin padding($padding) {
 	padding: get_padding($padding);
 }
 
-~widgetsmixin padding_x($padding) {
+@mixin padding_x($padding) {
 	padding: 0 get_padding($padding);
 }
 
-~widgetsmixin padding_y($padding) {
+@mixin padding_y($padding) {
 	padding: get_padding($padding) 0;
 }

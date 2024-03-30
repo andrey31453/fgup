@@ -1,6 +1,6 @@
 import { i_message, i_user, i_create_init_message } from '~types'
 
-import { create_message, update_message } from '~widgetsapi'
+import { create_message, update_message } from '~api'
 
 import { wait_condition } from '~libs'
 import { use_user_store } from '~store'

@@ -100,10 +100,10 @@ const align_class = get_align({
 </template>
 
 <style lang="scss">
-~widgetsuse '~styles/utils';
+@use '~styles/utils';
 
 .app_record {
 	width: 100%;
-	~widgetsinclude utils.font('mark');
+	@include utils.font('mark');
 }
 </style>

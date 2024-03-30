@@ -15,10 +15,10 @@ const date_format = moment(props.date).locale('ru').format('hh:mm DD MMMM')
 </template>
 
 <style lang="scss" scoped>
-~widgetsuse '~styles/utils';
+@use '~styles/utils';
 
 .the_date {
-	~widgetsinclude utils.font('small');
-	~widgetsinclude utils.opacity();
+	@include utils.font('small');
+	@include utils.opacity();
 }
 </style>

@@ -42,7 +42,7 @@ import { the_wrapper } from '~ui'
 </template>
 
 <style scoped lang="scss">
-~widgetsuse '~styles/utils';
+@use '~styles/utils';
 $avatar_size: 48px;
 
 .choise_user {
@@ -57,7 +57,7 @@ $avatar_size: 48px;
 		width: 300px;
 
 		:deep(.v-select__selection-text) {
-			~widgetsinclude utils.font('mark');
+			@include utils.font('mark');
 		}
 	}
 }

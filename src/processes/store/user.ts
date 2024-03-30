@@ -1,4 +1,4 @@
-import { get_users, delete_user } from '~widgetsapi'
+import { get_users, delete_user } from '~api'
 import { i_user } from '~types'
 import { use_init_users } from '~features'
 

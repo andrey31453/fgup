@@ -1,6 +1,6 @@
-~widgetsuse '~styles/utils';
+@use '~styles/utils';
 
 html {
 	overflow-y: auto !important;
-	~widgetsinclude utils.scroll_style();
+	@include utils.scroll_style();
 }

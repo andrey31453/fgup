@@ -1,5 +1,5 @@
 import { init_users } from '~config'
-import { create_user } from '~widgetsapi'
+import { create_user } from '~api'
 import { i_user } from '~types'
 
 interface i_user_store {

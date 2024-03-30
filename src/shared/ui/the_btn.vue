@@ -29,15 +29,15 @@ const variant = get_variant(props)
 </template>
 
 <style lang="scss" scoped>
-~widgetsuse '~styles/utils';
+@use '~styles/utils';
 
 .the_btn {
 	cursor: pointer;
-	~widgetsinclude utils.animation();
-	~widgetsinclude utils.opacity();
+	@include utils.animation();
+	@include utils.opacity();
 
 	&:hover {
-		~widgetsinclude utils.opacity('false');
+		@include utils.opacity('false');
 	}
 }
 </style>

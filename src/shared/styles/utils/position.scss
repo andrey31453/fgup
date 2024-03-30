@@ -1,16 +1,16 @@
-~widgetsuse 'sass:map';
+@use 'sass:map';
 
-~widgetsmixin z($z) {
-  position: relative;
-  z-index: $z;
+@mixin z($z) {
+	position: relative;
+	z-index: $z;
 }
 
-~widgetsmixin absolute($z, $offset: 0) {
-  position: absolute;
-  z-index: $z;
+@mixin absolute($z, $offset: 0) {
+	position: absolute;
+	z-index: $z;
 
-  top: #{$offset}px;
-  bottom: #{$offset}px;
-  left: #{$offset}px;
-  right: #{$offset}px;
+	top: #{$offset}px;
+	bottom: #{$offset}px;
+	left: #{$offset}px;
+	right: #{$offset}px;
 }

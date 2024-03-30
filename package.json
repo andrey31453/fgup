@@ -1,5 +1,5 @@
 {
-	"name": "social wall client",
+	"name": "fgup test",
 	"private": true,
 	"scripts": {
 		"dev": "webpack serve --env dev",
@@ -12,9 +12,10 @@
 		"vuetify": "^3.4.7"
 	},
 	"devDependencies": {
-		"~widgetsbabel/core": "^7.20.7",
-		"~widgetsbabel/preset-env": "^7.20.2",
-		"~types/node": "^20.10.4",
+		"tsconfig-paths-webpack-plugin": "^4.1.0",
+		"@babel/core": "^7.20.7",
+		"@babel/preset-env": "^7.20.2",
+		"@types/node": "^20.10.4",
 		"babel-loader": "^9.1.0",
 		"copy-webpack-plugin": "^11.0.0",
 		"css-loader": "^6.7.3",

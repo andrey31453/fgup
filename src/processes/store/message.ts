@@ -1,4 +1,4 @@
-import { get_messages, delete_message } from '~widgetsapi'
+import { get_messages, delete_message } from '~api'
 import { use_init_messages, use_reply_hash } from '~features'
 
 import { i_message, i_extend_message } from '~types'

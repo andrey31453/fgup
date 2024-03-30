@@ -1,6 +1,6 @@
-~widgetsuse '~styles/vars';
-~widgetsuse 'sass:map';
-~widgetsuse 'sass:list';
+@use '~styles/vars';
+@use 'sass:map';
+@use 'sass:list';
 
 $regular: vars.$ff, vars.$fs, vars.$fw, vars.$lh, vars.$tt;
 $mark: vars.$ff_mark, vars.$fs_mark, vars.$fw_mark, vars.$lh_mark, vars.$tt_mark;
@@ -18,7 +18,7 @@ $font_types: (
 	'small': $small,
 );
 
-~widgetsmixin font($font_type: 'true') {
+@mixin font($font_type: 'true') {
 	$font_type_vars: map.get($font_types, $font_type);
 
 	font-family: list.nth($font_type_vars, 1);

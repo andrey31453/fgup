@@ -36,7 +36,7 @@ const get_rules = (dev) => [
 			{
 				loader: 'babel-loader',
 				options: {
-					presets: ['~widgetsbabel/preset-env'],
+					presets: ['@babel/preset-env'],
 				},
 			},
 		],

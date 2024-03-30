@@ -1,6 +1,7 @@
 {
 	"compilerOptions": {
 		"target": "es5",
+		"lib": ["es2022", "es2020", "es2019", "es2016", "dom"],
 		"module": "es6",
 		"moduleResolution": "node",
 		"allowSyntheticDefaultImports": true,
@@ -10,6 +11,7 @@
 		"baseUrl": ".",
 		"paths": {
 			"~config": ["./src/entities/config"],
+			"~api": ["./src/entities/api"],
 			"~entities": ["./src/entities"],
 			"~features": ["./src/features"],
 			"~libs": ["./src/shared/libs"],

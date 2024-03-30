@@ -11,7 +11,7 @@ services:
     ports:
       - $client_port:$client_port
     volumes:
-      - ./client:$client_workdir
+      - .:$client_workdir
       - v_vuejs:$client_workdir/node_modules
 
 volumes:
@@ -20,4 +20,4 @@ volumes:
     driver_opts:
       type: none
       o: bind
-      device: ./client/node_modules
+      device: ./node_modules

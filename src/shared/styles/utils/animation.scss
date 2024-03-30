@@ -1,24 +1,24 @@
-~widgetsuse '~styles/vars';
-~widgetsuse 'sass:list';
+@use '~styles/vars';
+@use 'sass:list';
 
 $rules: width, max-width, height, max-height, color, border, box-shadow,
 	background, margin, padding, transform, opacity, left, top, bottom, right,
 	z-index, fill;
 
-~widgetsfunction get_transition() {
+@function get_transition() {
 	$transition: ();
 
-	~widgetseach $rule in $rules {
+	@each $rule in $rules {
 		$transition: list.append(
 			$transition,
 			$rule vars.$animation_time vars.$animation_method
 		);
 	}
 
-	~widgetsreturn $transition;
+	@return $transition;
 }
 
-~widgetsmixin animation() {
+@mixin animation() {
 	// transition: get_transition();
 
 	transition: width vars.$animation_time vars.$animation_method,

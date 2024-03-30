@@ -9,10 +9,10 @@ import { the_wrapper } from '~ui'
 </template>
 
 <style scoped lang="scss">
-~widgetsuse '~styles/utils';
+@use '~styles/utils';
 
 .app_wrapper {
-	~widgetsinclude utils.font();
+	@include utils.font();
 
 	min-height: 100vh;
 }

@@ -30,12 +30,8 @@ import { the_wrapper } from '~ui'
 	<app_wrapper>
 		<!-- header -->
 		<app_header>
-			<template #start>
-				<app_theme />
-			</template>
-			<template #end>
-				<app_user />
-			</template>
+			<app_theme />
+			<app_user />
 		</app_header>
 		<!-- /header -->
 

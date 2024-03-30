@@ -18,7 +18,7 @@ import { the_wrapper, the_background, the_btn } from '~ui'
 <template>
 	<the_btn
 		submit
-		~widgetsclick="toggle_theme"
+		@click="toggle_theme"
 		>{{ theme_name }}</the_btn
 	>
 </template>

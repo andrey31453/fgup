@@ -21,7 +21,7 @@ const emits = defineEmits(['close'])
 
 // message value
 
-import { create_message } from '~widgetsapi'
+import { create_message } from '~api'
 import { delay } from '~libs'
 import { use_user_store, use_message_store } from '~store'
 import { storeToRefs } from 'pinia'
@@ -63,21 +63,21 @@ import { the_btn, the_wrapper } from '~ui'
 		v-model="message_value"
 		placeholder="Текст сообщения"
 		variant="underlined"
-		~widgetskeydown.enter="on_submit"
+		@keydown.enter="on_submit"
 	/>
 
 	<the_wrapper end>
 		<template v-if="clear">
-			<the_btn ~widgetsclick="clear_new_message">очистить</the_btn>
+			<the_btn @click="clear_new_message">очистить</the_btn>
 		</template>
 
 		<template v-else>
-			<the_btn ~widgetsclick="on_close">отменить</the_btn>
+			<the_btn @click="on_close">отменить</the_btn>
 		</template>
 
 		<the_btn
 			submit
-			~widgetsclick="on_submit"
+			@click="on_submit"
 		>
 			отправить
 		</the_btn>

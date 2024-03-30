@@ -61,12 +61,10 @@ import { the_btn, the_wrapper, the_date } from '~ui'
 
 				<v-card-actions>
 					<the_wrapper gap>
-						<the_btn ~widgetsclick="toggle_new_message_displayed">
-							Ответить
-						</the_btn>
+						<the_btn @click="toggle_new_message_displayed"> Ответить </the_btn>
 
 						<template v-if="data.answers">
-							<the_btn ~widgetsclick="change_visible_news(data._id)">
+							<the_btn @click="change_visible_news(data._id)">
 								{{ data.answers }}
 								{{
 									word_declination(data.answers, ['ответ', 'ответа', 'ответов'])
@@ -84,7 +82,7 @@ import { the_btn, the_wrapper, the_date } from '~ui'
 					:style="`margin-right: ${6 * data.level}rem`"
 					:reply_to="data._id"
 					:level="data.level + 1"
-					~widgetsclose="toggle_new_message_displayed"
+					@close="toggle_new_message_displayed"
 				/>
 			</template>
 			<!-- /the_new_message -->
