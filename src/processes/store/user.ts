@@ -1,6 +1,5 @@
 import { get_users, delete_user } from '~api'
 import { i_user } from '~types'
-import { use_init_users } from '~features'
 
 export default {
 	// state
@@ -15,9 +14,6 @@ export default {
 	actions: {
 		async init(): Promise<void> {
 			await this.set_users()
-			use_init_users(this, this.set_users)
-
-			// this.delete_users(this.users)
 		},
 
 		async set_users(): Promise<void> {

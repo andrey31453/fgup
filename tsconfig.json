@@ -10,6 +10,7 @@
 		"forceConsistentCasingInFileNames": true,
 		"baseUrl": ".",
 		"paths": {
+			"~db": ["./src/.db"],
 			"~config": ["./src/entities/config"],
 			"~api": ["./src/entities/api"],
 			"~entities": ["./src/entities"],

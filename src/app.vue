@@ -1,22 +1,9 @@
 <script setup lang="ts">
-// users
-
-import { use_user } from '~features'
-use_user()
-
-// messages
-
-import { use_message } from '~features'
-use_message()
-
-// components
-
 import {
-	app_body,
+	app_menu,
+	app_main,
 	app_footer,
 	app_header,
-	app_messages,
-	app_new_messages,
 	app_record,
 	app_theme,
 	app_user,
@@ -30,19 +17,15 @@ import { the_wrapper } from '~ui'
 	<app_wrapper>
 		<!-- header -->
 		<app_header>
-			<app_theme />
+			<app_menu />
 			<app_user />
+			<app_theme />
 		</app_header>
 		<!-- /header -->
 
-		<!-- body -->
-		<app_body>
-			<the_wrapper column>
-				<app_new_messages />
-				<app_messages />
-			</the_wrapper>
-		</app_body>
-		<!-- /body -->
+		<!-- main -->
+		<app_main />
+		<!-- /main -->
 
 		<!-- footer -->
 		<app_footer>

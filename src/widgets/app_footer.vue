@@ -5,10 +5,7 @@ import { the_wrapper, the_background } from '~ui'
 <template>
 	<the_background variant="contrast">
 		<v-container>
-			<the_wrapper
-				center
-				p
-			>
+			<the_wrapper p>
 				<slot />
 			</the_wrapper>
 		</v-container>
