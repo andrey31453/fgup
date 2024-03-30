@@ -12,69 +12,69 @@ const template = __dirname + '/src/template/'
 //
 
 const get_rules = (dev) => [
-  // vue
-  {
-    test: /\.vue$/,
-    loader: 'vue-loader',
-  },
+	// vue
+	{
+		test: /\.vue$/,
+		loader: 'vue-loader',
+	},
 
-  // ts
-  {
-    test: /\.ts$/,
-    loader: 'ts-loader',
-    exclude: /node_modules/,
-    options: {
-      appendTsSuffixTo: [/\.vue$/],
-    },
-  },
+	// ts
+	{
+		test: /\.ts$/,
+		loader: 'ts-loader',
+		exclude: /node_modules/,
+		options: {
+			appendTsSuffixTo: [/\.vue$/],
+		},
+	},
 
-  {
-    test: /\.js$/i,
-    exclude: /(node_modules)/,
-    use: [
-      {
-        loader: 'babel-loader',
-        options: {
-          presets: ['@babel/preset-env'],
-        },
-      },
-    ],
-  },
+	{
+		test: /\.js$/i,
+		exclude: /(node_modules)/,
+		use: [
+			{
+				loader: 'babel-loader',
+				options: {
+					presets: ['@babel/preset-env'],
+				},
+			},
+		],
+	},
 
-  // scss
-  {
-    test: /\.(scss|css|sass)$/i,
-    use: [
-      'style-loader',
-      'css-loader',
-      {
-        loader: 'postcss-loader',
-        options: {
-          postcssOptions: {
-            plugins: [require('postcss-preset-env')],
-          },
-        },
-      },
-      {
-        loader: 'sass-loader',
-        options: {
-          sourceMap: dev ? true : false,
-        },
-      },
-    ],
-  },
+	// scss
+	{
+		test: /\.(scss|css|sass)$/i,
+		use: [
+			'style-loader',
+			'css-loader',
+			{
+				loader: 'postcss-loader',
+				options: {
+					postcssOptions: {
+						plugins: [require('postcss-preset-env')],
+					},
+				},
+			},
+			{
+				loader: 'sass-loader',
+				options: {
+					sourceMap: dev ? true : false,
+				},
+			},
+		],
+	},
 
-  // files
-  {
-    test: /\.(png|jpg|webp|ico|.json)$/i,
-    type: 'asset/resource',
-  },
+	// files
+	{
+		test: /\.(png|jpg|webp|ico|.json)$/i,
+		type: 'asset/resource',
+	},
 
-  // svg
-  {
-    test: /\.svg$/,
-    loader: 'svg-inline-loader',
-  },
+	// svg
+	{
+		test: /\.svg$/,
+		loader: 'svg-inline-loader',
+	},
 ]
 
 //
@@ -82,23 +82,23 @@ const get_rules = (dev) => [
 //
 
 const get_plugins = () => [
-  new webpack.DefinePlugin({
-    __VUE_OPTIONS_API__: false,
-    __VUE_PROD_DEVTOOLS__: false,
-  }),
-  new vue_loader(),
-  new html_webpack({
-    favicon: template + 'favicon.png',
-    template: template + 'index.html',
-  }),
-  new copy_webpack({
-    patterns: [
-      {
-        from: src + 'static',
-        to: dist + 'assets',
-      },
-    ],
-  }),
+	new webpack.DefinePlugin({
+		__VUE_OPTIONS_API__: false,
+		__VUE_PROD_DEVTOOLS__: false,
+	}),
+	new vue_loader(),
+	new html_webpack({
+		favicon: template + 'favicon.png',
+		template: template + 'index.html',
+	}),
+	new copy_webpack({
+		patterns: [
+			{
+				from: src + 'static',
+				to: dist + 'assets',
+			},
+		],
+	}),
 ]
 
 //
@@ -106,20 +106,20 @@ const get_plugins = () => [
 //
 
 const get_alias = () => ({
-  '@': src,
+	'@': src,
 
-  '@store': src + 'processes/store',
-  '@widgets': src + 'widgets',
-  '@features': src + 'features',
+	'@store': src + 'processes/store',
+	'@widgets': src + 'widgets',
+	'@features': src + 'features',
 
-  '@entities': src + 'entities',
-  '@types': src + 'entities/types',
-  '@consts': src + 'entities/consts',
-  '@api': src + 'entities/api',
+	'@entities': src + 'entities',
+	'@types': src + 'entities/types',
+	'@consts': src + 'entities/consts',
+	'@api': src + 'entities/api',
 
-  '@styles': src + 'shared/styles',
-  '@libs': src + 'shared/libs',
-  '@ui': src + 'shared/ui',
+	'@styles': src + 'shared/styles',
+	'@libs': src + 'shared/libs',
+	'@ui': src + 'shared/ui',
 })
 
 //
@@ -127,13 +127,13 @@ const get_alias = () => ({
 //
 
 const get_serve = (dev) => {
-  if (!dev) return undefined
+	if (!dev) return undefined
 
-  return {
-    hot: true,
-    port: 8080,
-    allowedHosts: 'all',
-  }
+	return {
+		hot: true,
+		port: 8080,
+		allowedHosts: 'all',
+	}
 }
 
 //
@@ -141,44 +141,44 @@ const get_serve = (dev) => {
 //
 
 module.exports = ({ dev }) => {
-  return {
-    // mode
-    mode: dev ? 'development' : 'production',
+	return {
+		// mode
+		mode: dev ? 'development' : 'production',
 
-    // target
-    target: ['browserslist'],
+		// target
+		target: ['browserslist'],
 
-    // devtool
-    devtool: dev ? 'eval-source-map' : undefined,
+		// devtool
+		devtool: dev ? 'eval-source-map' : undefined,
 
-    // devServer
-    devServer: get_serve(dev),
+		// devServer
+		devServer: get_serve(dev),
 
-    // entry
-    entry: {
-      main: src + 'app/main.ts',
-    },
+		// entry
+		entry: {
+			main: src + 'main.ts',
+		},
 
-    // output
-    output: {
-      filename: '[name].js',
-      clean: true,
-      path: dist,
-      assetModuleFilename: '[name][ext]',
-    },
+		// output
+		output: {
+			filename: '[name].js',
+			clean: true,
+			path: dist,
+			assetModuleFilename: '[name][ext]',
+		},
 
-    // resolve
-    resolve: {
-      extensions: ['.vue', '.ts', '.js'],
-      alias: get_alias(),
-    },
+		// resolve
+		resolve: {
+			extensions: ['.vue', '.ts', '.js'],
+			alias: get_alias(),
+		},
 
-    // module
-    module: {
-      rules: get_rules(dev),
-    },
+		// module
+		module: {
+			rules: get_rules(dev),
+		},
 
-    //plugins
-    plugins: get_plugins(),
-  }
+		//plugins
+		plugins: get_plugins(),
+	}
 }

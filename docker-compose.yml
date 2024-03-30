@@ -6,7 +6,7 @@ services:
     ports:
       - $bd_port:$bd_port
     environment:
-      - MONGODB_DATABASE="test"
+      - MONGODB_DATABASE="$bd_name"
 
   s_nestjs:
     depends_on:
