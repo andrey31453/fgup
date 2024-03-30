@@ -3,9 +3,13 @@ import { the_wrapper } from '~ui'
 </script>
 
 <template>
-	<div class="app_wrapper">
+	<the_wrapper
+		class="app_wrapper"
+		column
+		between
+	>
 		<slot />
-	</div>
+	</the_wrapper>
 </template>
 
 <style scoped lang="scss">
@@ -13,7 +17,6 @@ import { the_wrapper } from '~ui'
 
 .app_wrapper {
 	@include utils.font();
-
 	min-height: 100vh;
 }
 </style>

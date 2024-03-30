@@ -1,6 +1,6 @@
 <template>
 	<div class="app_record">
-		И так сойдет — враг человечества. @Кто убил BlackBerry
+		И так сойдет — враг всего человечества. @Кто убил BlackBerry
 	</div>
 </template>
 

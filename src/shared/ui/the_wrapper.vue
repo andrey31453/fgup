@@ -48,10 +48,10 @@ const props = defineProps({
 
 // flex rules
 const get_justify = ({ between, center, end, column }) => {
-	if (column) return ''
 	if (between) return `justify-space-between`
 	if (center) return `justify-center`
 	if (end) return `justify-end`
+	if (column) return ''
 
 	return `justify-start`
 }

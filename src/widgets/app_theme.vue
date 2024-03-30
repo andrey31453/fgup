@@ -4,21 +4,22 @@ import { useTheme } from 'vuetify'
 
 const theme = useTheme()
 
-const toggle_theme = (): void => {
+const toggle_theme = () => {
 	theme.global.name.value = theme.global.current.value.dark ? 'light' : 'dark'
 }
 
-const theme_name: Ref<string> = computed(() =>
-	theme.global.current.value.dark ? 'Салуса Секундус' : 'Дюна'
+const icon_name: Ref<string> = computed(() =>
+	theme.global.current.value.dark ? 'sun' : 'moon'
 )
 
-import { the_wrapper, the_background, the_btn } from '~ui'
+import { the_btn, the_icon } from '~ui'
 </script>
 
 <template>
 	<the_btn
 		submit
 		@click="toggle_theme"
-		>{{ theme_name }}</the_btn
 	>
+		<the_icon :name="icon_name" />
+	</the_btn>
 </template>
