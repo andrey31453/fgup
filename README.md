@@ -1,9 +1,17 @@
-## install
+## install with docker
 
 1. git clone https://github.com/kvisatchaderah/fgup.git
 2. cd ./fgup
 3. chmod +x ./dev.sh
 4. ./dev.sh
+5. open http://localhost:8000/
+
+## install without docker
+
+1. git clone https://github.com/kvisatchaderah/fgup.git
+2. cd ./fgup
+3. npm i
+4. npm run dev
 5. open http://localhost:8000/
 
 ## data

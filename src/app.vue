@@ -9,6 +9,10 @@ import {
 	app_user,
 	app_wrapper,
 } from '~widgets'
+
+import { use_users } from '~features'
+
+use_users()
 </script>
 
 <template>

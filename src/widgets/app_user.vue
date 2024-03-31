@@ -1,9 +1,6 @@
 <script setup lang="ts">
 import { use_user_store } from '~store'
 import { storeToRefs } from 'pinia'
-import { use_user } from '~features'
-
-use_user()
 
 const user_store = use_user_store()
 const { users, current_user_id, current_user } = storeToRefs(user_store)

@@ -5,9 +5,9 @@ export interface _user {
 }
 
 enum _user_names {
-	baron = 'Барон Харконнен',
-	paul = 'Пол Атрейдес',
-	chani = 'Чани',
+	baron = 'Барон Харконнен (П1)',
+	paul = 'Пол Атрейдес (П2)',
+	chani = 'Чани (П3)',
 }
 
 export const users: _user[] = [
