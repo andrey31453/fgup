@@ -4,19 +4,19 @@ const get_word_declination = (word_form: string = ''): string => {
 	return ' ' + word_form
 }
 
-const not_correct_word_forms = (word_forms: t_word_forms): boolean => {
+const not_correct_word_forms = (word_forms: _word_forms): boolean => {
 	return !Array.isArray(word_forms) || !word_forms.length
 }
 
 const not_correct_quantities = (
 	quantity: number,
-	word_forms: t_word_forms
+	word_forms: _word_forms
 ): boolean => {
 	return word_forms.length !== 3 || typeof +quantity !== 'number'
 }
 
 const create_word_declination = (
-	word_forms: t_word_forms,
+	word_forms: _word_forms,
 	remainder_by_100: number,
 	remainder_by_10: number
 ): string => {
@@ -35,11 +35,11 @@ const create_word_declination = (
 	return get_word_declination(word_forms[2])
 }
 
-export type t_word_forms = [string, string, string]
+export type _word_forms = [string, string, string]
 
 export const word_declination = (
 	quantity: number,
-	word_forms: t_word_forms
+	word_forms: _word_forms
 ): string => {
 	// check for correct input data
 	if (not_correct_word_forms(word_forms)) return get_word_declination()

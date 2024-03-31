@@ -44,6 +44,11 @@ const props = defineProps({
 		type: Boolean,
 		default: false,
 	},
+
+	shrink: {
+		type: [String, Number],
+		default: 1,
+	},
 })
 
 // flex rules
@@ -80,7 +85,8 @@ const align_class = get_align({
 	<div
 		:class="[
 			'the_wrapper',
-			'd-flex ga-2',
+			'd-flex flex-wrap ga-2',
+			`flex-xl-shrink-${shrink}`,
 			justify_class,
 			align_class,
 			{
@@ -98,12 +104,3 @@ const align_class = get_align({
 		<slot />
 	</div>
 </template>
-
-<style lang="scss">
-@use '~styles/utils';
-
-.app_record {
-	width: 100%;
-	@include utils.font('mark');
-}
-</style>

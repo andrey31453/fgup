@@ -1,14 +1,14 @@
 <script setup lang="ts">
 import { use_user_store } from '~store'
 import { storeToRefs } from 'pinia'
-import { computed } from 'vue'
+import { use_user } from '~features'
+
+use_user()
 
 const user_store = use_user_store()
-const { users, current_user } = storeToRefs(user_store)
+const { users, current_user_id, current_user } = storeToRefs(user_store)
 
-const current_user_data = computed(() =>
-	users.value.find((user) => user._id === current_user.value)
-)
+user_store.init()
 
 import { the_wrapper } from '~ui'
 </script>
@@ -18,23 +18,20 @@ import { the_wrapper } from '~ui'
 		class="choise_user"
 		gap
 	>
-		<template v-if="current_user_data">
-			<v-img
-				class="choise_user__avatar rounded"
-				v-if="current_user_data"
-				aspect-ratio="1/1"
-				cover
-				:src="`/assets/users/${current_user_data.photo_id}.jpg`"
-				:alt="current_user_data.name"
-			/>
-		</template>
+		<v-img
+			class="choise_user__avatar rounded"
+			aspect-ratio="1/1"
+			cover
+			:src="`/assets/users/${current_user.photo_id}.jpg`"
+			:alt="current_user.name"
+		/>
 
 		<v-select
 			class="choise_user__select"
 			label="Пользователь"
-			v-model="current_user"
+			v-model="current_user_id"
 			:items="users"
-			item-value="_id"
+			item-value="id"
 			item-title="name"
 			variant="underlined"
 		/>

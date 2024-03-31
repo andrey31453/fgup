@@ -9,8 +9,6 @@ import {
 	app_user,
 	app_wrapper,
 } from '~widgets'
-
-import { the_wrapper } from '~ui'
 </script>
 
 <template>
@@ -19,7 +17,6 @@ import { the_wrapper } from '~ui'
 		<app_header>
 			<app_menu />
 			<app_user />
-			<app_theme />
 		</app_header>
 		<!-- /header -->
 
@@ -29,6 +26,7 @@ import { the_wrapper } from '~ui'
 
 		<!-- footer -->
 		<app_footer>
+			<app_theme />
 			<app_record />
 		</app_footer>
 		<!-- /footer -->
