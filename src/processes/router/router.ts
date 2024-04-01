@@ -1,4 +1,8 @@
-import { createWebHashHistory, createRouter } from 'vue-router'
+import {
+	createWebHashHistory,
+	createWebHistory,
+	createRouter,
+} from 'vue-router'
 
 import { use_user_store } from '~store'
 import { user_scopes } from '~db'
@@ -21,7 +25,7 @@ const routes = Object.keys(routes_data).map((key) =>
 )
 
 export const router = createRouter({
-	history: createWebHashHistory(),
+	history: createWebHistory(),
 	// @ts-ignore
 	routes,
 })
