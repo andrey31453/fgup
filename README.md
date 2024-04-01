@@ -1,3 +1,8 @@
+<!-- TODO при смене пользователя - перекидывать на главную если страница недоступна -->
+<!-- TODO динамический импорт страниц -->
+<!-- TODO енамс страницы -->
+<!-- TODO чтобы открывалась при перезагрузке http://localhost:8000/page_3 -->
+
 ## install with docker
 
 1. git clone https://github.com/kvisatchaderah/fgup.git

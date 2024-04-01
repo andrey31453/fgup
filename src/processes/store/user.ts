@@ -3,10 +3,10 @@ import {
 	_user,
 	roles,
 	_role,
-	_user_role,
+	user_role,
 	scopes,
 	_scopes,
-	_user_scope,
+	user_scope,
 } from '~db'
 
 export default {
@@ -23,13 +23,13 @@ export default {
 		current_user: (state): _user =>
 			state.users.find((user) => user.id === state.current_user_id),
 
-		current_roles(state): _user_role[] {
+		current_roles(state): user_role[] {
 			return state.roles.find(
 				(user_roles) => user_roles.user_id === this.current_user_id
 			).roles
 		},
 
-		current_scopes(state): Set<_user_scope> {
+		current_scopes(state): Set<user_scope> {
 			return this.current_roles.reduce((acc, current_role) => {
 				state.scopes[current_role].forEach((scope) => acc.add(scope))
 
@@ -46,7 +46,7 @@ export default {
 			this.current_user_id = users[0].id
 		},
 
-		can(scope: _user_scope | _user_scope[]): boolean {
+		can(scope: user_scope | user_scope[]): boolean {
 			return [scope]
 				.flat()
 				.reduce((can, scope) => can || this.current_scopes.has(scope), false)
