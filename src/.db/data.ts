@@ -12,29 +12,29 @@ const table_header = ['period 1', 'period 2', 'period 3', 'period 4']
 export const table_1: _table = {
 	header: table_header,
 	body: {
-		dfo: ['t1 dfo 1', 't1 dfo 2', 't1 dfo 3', 't1 dfo 4'],
-		cfo: ['t1 cfo 1', 't1 cfo 2', 't1 cfo 3', 't1 cfo 4'],
-		ufo: ['t1 ufo 1', 't1 ufo 2', 't1 ufo 3', 't1 ufo 4'],
-		szfo: ['t1 szfo 1', 't1 szfo 2', 't1 szfo 3', 't1 szfo 4'],
+		dfo: ['т1 ДФО 1', 'т1 ДФО 2', 'т1 ДФО 3', 'т1 ДФО 4'],
+		cfo: ['т1 ЦФО 1', 'т1 ЦФО 2', 'т1 ЦФО 3', 'т1 ЦФО 4'],
+		ufo: ['т1 УФО 1', 'т1 УФО 2', 'т1 УФО 3', 'т1 УФО 4'],
+		szfo: ['т1 СЗФО 1', 'т1 СЗФО 2', 'т1 СЗФО 3', 'т1 СЗФО 4'],
 	},
 }
 
 export const table_2: _table = {
 	header: table_header,
 	body: {
-		dfo: ['t2 dfo 1', 't2 dfo 2', 't2 dfo 3', 't2 dfo 4'],
-		cfo: ['t2 cfo 1', 't2 cfo 2', 't2 cfo 3', 't2 cfo 4'],
-		ufo: ['t2 ufo 1', 't2 ufo 2', 't2 ufo 3', 't2 ufo 4'],
-		szfo: ['t2 szfo 1', 't2 szfo 2', 't2 szfo 3', 't2 szfo 4'],
+		dfo: ['t2 ДФО 1', 't2 ДФО 2', 't2 ДФО 3', 't2 ДФО 4'],
+		cfo: ['t2 ЦФО 1', 't2 ЦФО 2', 't2 ЦФО 3', 't2 ЦФО 4'],
+		ufo: ['t2 УФО 1', 't2 УФО 2', 't2 УФО 3', 't2 УФО 4'],
+		szfo: ['t2 СЗФО 1', 't2 СЗФО 2', 't2 СЗФО 3', 't2 СЗФО 4'],
 	},
 }
 
 export const table_3: _table = {
 	header: table_header,
 	body: {
-		dfo: ['t3 dfo 1', 't3 dfo 2', 't3 dfo 3', 't3 dfo 4'],
-		cfo: ['t3 cfo 1', 't3 cfo 2', 't3 cfo 3', 't3 cfo 4'],
-		ufo: ['t3 ufo 1', 't3 ufo 2', 't3 ufo 3', 't3 ufo 4'],
-		szfo: ['t3 szfo 1', 't3 szfo 2', 't3 szfo 3', 't3 szfo 4'],
+		dfo: ['t3 ДФО 1', 't3 ДФО 2', 't3 ДФО 3', 't3 ДФО 4'],
+		cfo: ['t3 ЦФО 1', 't3 ЦФО 2', 't3 ЦФО 3', 't3 ЦФО 4'],
+		ufo: ['t3 УФО 1', 't3 УФО 2', 't3 УФО 3', 't3 УФО 4'],
+		szfo: ['t3 СЗФО 1', 't3 СЗФО 2', 't3 СЗФО 3', 't3 СЗФО 4'],
 	},
 }
