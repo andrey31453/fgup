@@ -58,9 +58,10 @@ import { routes_data } from '~router'
 
 <style scoped lang="scss">
 @use '~styles/vars';
+@use '~styles/utils';
 
 .router-link-active {
-	font-weight: bold;
+	@include utils.font('h3');
 	color: vars.$bc;
 }
 </style>
