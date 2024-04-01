@@ -11,7 +11,7 @@ import { user_scopes } from '~db'
 import { use_user_store } from '~store'
 const { can } = use_user_store()
 
-import { route_paths } from '~router'
+import { routes_data } from '~router'
 </script>
 
 <template>
@@ -19,7 +19,7 @@ import { route_paths } from '~router'
 		<the_wrapper gap>
 			<router-link
 				v-if="home"
-				:to="route_paths.home"
+				:to="routes_data.home.path"
 			>
 				<the_wrapper
 					column
@@ -34,21 +34,21 @@ import { route_paths } from '~router'
 
 			<router-link
 				v-if="can(user_scopes.read_pm1)"
-				:to="route_paths.page_1"
+				:to="routes_data.page_1.path"
 			>
 				Пункт меню 1
 			</router-link>
 
 			<router-link
 				v-if="can(user_scopes.read_pm2)"
-				:to="route_paths.page_2"
+				:to="routes_data.page_2.path"
 			>
 				Пункт меню 2
 			</router-link>
 
 			<router-link
 				v-if="can(user_scopes.read_pm3)"
-				:to="route_paths.page_3"
+				:to="routes_data.page_3.path"
 			>
 				Пункт меню 3
 			</router-link>

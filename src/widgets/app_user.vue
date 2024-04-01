@@ -7,6 +7,9 @@ const { users, current_user_id, current_user } = storeToRefs(user_store)
 
 user_store.init()
 
+import { use_user_scope_guard } from '~features'
+use_user_scope_guard()
+
 import { the_wrapper } from '~ui'
 </script>
 
