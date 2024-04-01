@@ -1,6 +1,3 @@
-<!-- TODO при смене пользователя - перекидывать на главную если страница недоступна -->
-<!-- TODO енамс страницы -->
-
 ## install with docker
 
 1. git clone https://github.com/kvisatchaderah/fgup.git
