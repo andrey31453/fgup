@@ -3,6 +3,7 @@ const { VueLoaderPlugin: vue_loader } = require('vue-loader')
 const copy_webpack = require('copy-webpack-plugin')
 const webpack = require('webpack')
 const tsconfig_paths = require('tsconfig-paths-webpack-plugin')
+const path = require('path')
 
 const dist = __dirname + '/dist/'
 const src = __dirname + '/src/'

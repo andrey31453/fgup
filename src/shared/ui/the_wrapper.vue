@@ -97,7 +97,7 @@ const align_class = get_align({
 				'pa-2': p,
 				'px-2': px,
 				'py-2': py,
-				'ga-3': gap,
+				'ga-5': gap,
 			},
 		]"
 	>

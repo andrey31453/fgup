@@ -1,8 +1,7 @@
 {
 	"compilerOptions": {
-		"target": "es5",
-		"lib": ["es2022", "es2020", "es2019", "es2016", "dom"],
-		"module": "es6",
+		"target": "es2020",
+		"module": "es2020",
 		"moduleResolution": "node",
 		"allowSyntheticDefaultImports": true,
 		"esModuleInterop": true,
@@ -10,6 +9,7 @@
 		"forceConsistentCasingInFileNames": true,
 		"baseUrl": ".",
 		"paths": {
+			// "~": [path.join(__dirname, "/src/")],
 			"~db": ["./src/.db"],
 			"~pages": ["./src/pages"],
 			"~config": ["./src/entities/config"],

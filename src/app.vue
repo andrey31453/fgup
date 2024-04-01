@@ -19,7 +19,7 @@ use_users()
 	<app_wrapper>
 		<!-- header -->
 		<app_header>
-			<app_menu />
+			<app_menu home />
 			<app_user />
 		</app_header>
 		<!-- /header -->
