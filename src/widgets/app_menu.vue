@@ -55,3 +55,12 @@ import { routes_data } from '~router'
 		</the_wrapper>
 	</nav>
 </template>
+
+<style scoped lang="scss">
+@use '~styles/vars';
+
+.router-link-active {
+	font-weight: bold;
+	color: vars.$bc;
+}
+</style>
