@@ -5,7 +5,7 @@ const webpack = require('webpack')
 const tsconfig_paths = require('tsconfig-paths-webpack-plugin')
 const path = require('path')
 
-const dist = path.resolve(__dirname, './public')
+const dist = path.resolve(__dirname, './public/')
 const src = __dirname + '/src/'
 const template = src + 'template/'
 
@@ -88,19 +88,22 @@ const get_plugins = () => [
 		__VUE_OPTIONS_API__: false,
 		__VUE_PROD_DEVTOOLS__: false,
 	}),
+
 	new vue_loader(),
+
 	new html_webpack({
 		favicon: template + 'favicon.png',
 		template: template + 'index.html',
 	}),
-	new copy_webpack({
-		patterns: [
-			{
-				from: src + 'static',
-				to: dist + '/assets',
-			},
-		],
-	}),
+
+	// new copy_webpack({
+	// 	patterns: [
+	// 		{
+	// 			from: src + 'static',
+	// 			to: dist + 'assets',
+	// 		},
+	// 	],
+	// }),
 ]
 
 //

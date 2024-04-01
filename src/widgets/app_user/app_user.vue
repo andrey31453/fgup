@@ -22,7 +22,7 @@ import { the_wrapper } from '~ui'
 			class="choise_user__avatar rounded"
 			aspect-ratio="1/1"
 			cover
-			:src="`/assets/users/${current_user.photo_id}.jpg`"
+			:src="require(`./users/${current_user.photo_id}.jpg`)"
 			:alt="current_user.name"
 		/>
 
