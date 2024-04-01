@@ -7,9 +7,11 @@ defineProps({
 })
 
 import { the_wrapper, the_icon } from '~ui'
-import { user_scope } from '~db'
+import { user_scopes } from '~db'
 import { use_user_store } from '~store'
 const { can } = use_user_store()
+
+import { route_paths } from '~router'
 </script>
 
 <template>
@@ -17,7 +19,7 @@ const { can } = use_user_store()
 		<the_wrapper gap>
 			<router-link
 				v-if="home"
-				to="/"
+				:to="route_paths.home"
 			>
 				<the_wrapper
 					column
@@ -31,20 +33,22 @@ const { can } = use_user_store()
 			</router-link>
 
 			<router-link
-				v-if="can(user_scope.read_pm1)"
-				to="/page_1"
+				v-if="can(user_scopes.read_pm1)"
+				:to="route_paths.page_1"
 			>
 				Пункт меню 1
 			</router-link>
+
 			<router-link
-				v-if="can(user_scope.read_pm2)"
-				to="/page_2"
+				v-if="can(user_scopes.read_pm2)"
+				:to="route_paths.page_2"
 			>
 				Пункт меню 2
 			</router-link>
+
 			<router-link
-				v-if="can(user_scope.read_pm3)"
-				to="/page_3"
+				v-if="can(user_scopes.read_pm3)"
+				:to="route_paths.page_3"
 			>
 				Пункт меню 3
 			</router-link>

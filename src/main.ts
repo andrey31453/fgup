@@ -26,7 +26,7 @@ vue_app.use(create_pinia())
 
 // router
 
-import { router } from '~processes'
+import { router } from '~router'
 vue_app.use(router)
 
 // mount

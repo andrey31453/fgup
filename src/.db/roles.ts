@@ -1,4 +1,4 @@
-export enum user_role {
+export enum user_roles {
 	admin = 'admin',
 	subadmin = 'subadmin',
 	user = 'user',
@@ -6,22 +6,22 @@ export enum user_role {
 
 export interface _role {
 	user_id: number
-	roles: user_role[]
+	roles: user_roles[]
 }
 
 export const roles: _role[] = [
 	{
 		user_id: 1,
-		roles: [user_role.admin],
+		roles: [user_roles.admin],
 	},
 
 	{
 		user_id: 2,
-		roles: [user_role.subadmin],
+		roles: [user_roles.subadmin],
 	},
 
 	{
 		user_id: 3,
-		roles: [user_role.user],
+		roles: [user_roles.user],
 	},
 ]

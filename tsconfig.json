@@ -9,7 +9,6 @@
 		"forceConsistentCasingInFileNames": true,
 		"baseUrl": ".",
 		"paths": {
-			// "~": [path.join(__dirname, "/src/")],
 			"~db": ["./src/.db"],
 			"~pages": ["./src/pages"],
 			"~config": ["./src/entities/config"],
@@ -18,6 +17,7 @@
 			"~features": ["./src/features"],
 			"~libs": ["./src/shared/libs"],
 			"~processes": ["./src/processes"],
+			"~router": ["./src/processes/router"],
 			"~store": ["./src/processes/store"],
 			"~types": ["./src/entities/types"],
 			"~ui": ["./src/shared/ui"],
