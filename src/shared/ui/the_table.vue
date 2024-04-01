@@ -4,6 +4,8 @@ defineProps(['data'])
 import { use_user_store } from '~store'
 const { can } = use_user_store()
 import { scope_by_key } from '~features'
+
+import { to_key } from '~libs'
 </script>
 
 <template>
@@ -12,7 +14,7 @@ import { scope_by_key } from '~features'
 			<tr>
 				<th
 					v-for="(header, header_idx) in data.header"
-					:key="'header' + header_idx"
+					:key="to_key('header', header_idx)"
 					class="text-left"
 				>
 					{{ header }}
@@ -28,7 +30,7 @@ import { scope_by_key } from '~features'
 				<tr v-if="can(scope_by_key(data_key))">
 					<td
 						v-for="(data_td, data_idx) in data_row"
-						:key="data_key + data_idx"
+						:key="to_key(data_key, data_idx)"
 					>
 						{{ data_td }}
 					</td>

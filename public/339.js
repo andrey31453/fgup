@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkfgup_test=self.webpackChunkfgup_test||[]).push([[339],{339:function(e,t,u){u.r(t),u.d(t,{default:function(){return p}});var n=u(641),f=u(953),r=u(9632),s=u(8816),p=(0,n.pM)({__name:"home",setup(e){return(e,t)=>((0,n.uX)(),(0,n.Wv)((0,f.R1)(r.I1),{center:""},{default:(0,n.k6)((()=>[(0,n.bF)((0,f.R1)(s.id))])),_:1}))}})}}]);

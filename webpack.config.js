@@ -5,7 +5,7 @@ const webpack = require('webpack')
 const tsconfig_paths = require('tsconfig-paths-webpack-plugin')
 const path = require('path')
 
-const dist = __dirname + '/dist/'
+const dist = path.resolve(__dirname, './public')
 const src = __dirname + '/src/'
 const template = src + 'template/'
 
@@ -97,7 +97,7 @@ const get_plugins = () => [
 		patterns: [
 			{
 				from: src + 'static',
-				to: dist + 'assets',
+				to: dist + '/assets',
 			},
 		],
 	}),

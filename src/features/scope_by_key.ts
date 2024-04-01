@@ -10,5 +10,8 @@ const scope_key_relations: _scope_key_relations = {
 	szfo: user_scopes.read_szfo,
 }
 
-export const scope_by_key = (data_key: _table_data_key) =>
-	scope_key_relations[data_key]
+export const scope_by_key = (data_key: any) => {
+	const current_scope = scope_key_relations[data_key]
+	if (!current_scope) return []
+	return current_scope
+}
